@@ -21,6 +21,8 @@ echo 'alias em="emacs -nw"' >> ~/.bashrc
 echo "unbind C-b" > ~/.tmux.conf
 echo "set-option -g prefix C-a" >> ~/.tmux.conf
 echo "bind-key C-a send-prefix" >> ~/.tmux.conf
+echo "set -g window-style 'fg=colour247,bg=colour236'" >> ~/.tmux.conf
+echo "set -g window-active-style 'fg=default,bg=colour234'" >> ~/.tmux.conf
 
 # intall additional tools from repo...
 sudo apt-get install gobuster seclists bpython golang ffuf feroxbuster hakrawler -y
