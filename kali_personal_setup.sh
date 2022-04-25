@@ -11,19 +11,19 @@ echo 'alias ll="ls -al"' >> ~/.bashrc
 echo 'alias ..="cd .."' >> ~/.zshrc
 echo 'alias ..="cd .."' >> ~/.bashrc
 
-echo 'bindkey "^P" up-line-or-search' >> ~/.zshrc
+echo 'bindkey "^P" history-beginning-search-backward' >> ~/.zshrc
 
 #set emacs aliases
 echo 'alias em="emacs -nw"' >> ~/.zshrc 
 echo 'alias em="emacs -nw"' >> ~/.bashrc
 
 #tmux config
-echo "unbind C-b" > .tmux.conf
+echo "unbind C-b" > ~/.tmux.conf
 echo "set-option -g prefix C-a" >> ~/.tmux.conf
 echo "bind-key C-a send-prefix" >> ~/.tmux.conf
 
 # intall additional tools from repo...
-sudo apt-get install gobuster seclists bpython golang -y
+sudo apt-get install gobuster seclists bpython golang ffuf feroxbuster hakrawler -y
 
 #setup golang
 echo 'export GOROOT=/usr/lib/go' >> ~/.bashrc
