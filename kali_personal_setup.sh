@@ -25,7 +25,7 @@ echo "set -g window-style 'fg=colour247,bg=colour236'" >> ~/.tmux.conf
 echo "set -g window-active-style 'fg=default,bg=colour234'" >> ~/.tmux.conf
 
 # intall additional tools from repo...
-sudo apt-get install gobuster seclists bpython golang ffuf feroxbuster hakrawler -y
+sudo apt-get install gobuster seclists bpython golang ffuf feroxbuster hakrawler -y gdb build-essentials
 
 #setup golang
 echo 'export GOROOT=/usr/lib/go' >> ~/.bashrc
@@ -66,4 +66,19 @@ mkdir ~/tools
 cd ~/tools
 wget  https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh
 wget https://github.com/DominicBreuker/pspy/releases/download/v1.2.0/pspy32s
+
+# radare-ghydra installation, use git version
+cd ~/box-setup/
+sudo apt-get remove radare2
+git clone https://github.com/radareorg/radare2
+radare2/sys/install.sh
+r2pm update
+r2pm -ci r2ghidra
+
+#install pwntools
+
+pip3 install pwntools
+
+#install GEF
+bash -c "$(curl -fsSL http://gef.blah.cat/sh)"
 
