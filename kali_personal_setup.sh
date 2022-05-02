@@ -5,8 +5,8 @@ sudo apt-get update && sudo apt-get dist-upgrade -y
 sudo apt-get install emacs tmux -y
 
 #set shell aliases
-echo 'alias ll="ls -al"' >> ~/.zshrc
-echo 'alias ll="ls -al"' >> ~/.bashrc
+echo 'alias ll="ls -alh"' >> ~/.zshrc
+echo 'alias ll="ls -alh"' >> ~/.bashrc
 
 echo 'alias ..="cd .."' >> ~/.zshrc
 echo 'alias ..="cd .."' >> ~/.bashrc
